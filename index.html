@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceffie Break - Interactive Kiosk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+    <header>
+        <h1>Ceffie Break</h1>
+        <p>An acoustic, relaxed social experience</p>
+        <button style="background: #130e0e; border: none; padding: 10px 20px; cursor: pointer;" id="theme-toggle">⏾☀︎</button>
+    </header>
+
+    <main>
+        <!-- Section for the self-removing event -->
+        <section id="special-offer">
+            <div class="offer-box">
+                <h2>☕ Today's Special!</h2>
+                <p>Get 20% off your first acoustic session brew.</p>
+                <button id="claim-offer">Claim Offer</button>
+            </div>
+        </section>
+
+        <!-- Section for input and mouseover events -->
+        <section class="menu-section">
+            <h2>Our Menu</h2>
+            <h4>Click on the blank space under menu items to see more details.</h4>
+            <input type="text" id="menu-search" placeholder="Search for a drink...">
+            <noresults id="no-results" class="hidden">No matching drinks found.</noresults>
+            <p id="search-feedback"></p>
+
+            <div class="menu-grid">
+                <div class="menu-card" id="card-1">
+                    <h3>Classic Espresso</h3>
+                    <p class="hidden-info">Rich, bold, and perfect for conversation.</p>
+                </div>
+                <div class="menu-card" id="card-2">
+                    <h3>Vanilla Latte</h3>
+                    <p class="hidden-info">Smooth and sweet, just like acoustic tunes.</p>
+                </div>
+                <div class="menu-card" id="card-3">
+                    <h3>Caramel Macchiato</h3>
+                    <p class="hidden-info">A delightful blend of vanilla and caramel.</p>
+                </div>
+                <div class="menu-card" id="card-4">
+                    <h3>Green Tea Latte</h3>
+                    <p class="hidden-info">A refreshing twist on a classic favorite.</p>
+                </div>
+                <div class="menu-card" id="card-5">
+                    <h3>Mint Chocolate</h3>
+                    <p class="hidden-info">A sweet, bitter, and refreshing balance.</p>
+                </div>
+                <div class="menu-card" id="card-6">
+                    <h3>Mocha</h3>
+                    <p class="hidden-info">an espresso-based drink flavored with chocolate.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section for form submit and keyup events -->
+        <section class="feedback-section">
+            <h2>Share Your Thoughts</h2>
+            <form id="feedback-form">
+                <label for="feedback-text">Message:</label>
+                <textarea id="feedback-text" rows="3" placeholder="Tell us about your vibe..."></textarea>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Make sure to link your JS file here -->
+    <script src="script.js"></script>
+</body>
+</html>
