@@ -1,0 +1,10 @@
+1. The browser records the click event when a user presses a button. 
+The event loop executes its callback function after determining whether an addEventListener is attached. 
+The code inside, such as classList.toggle, is executed by that function, instantly updating the DOM and changing the page's appearance.  
+2. JavaScript uses the event loop to handle each one individually. 
+Simultaneous events are queued up and the handler for the first event is fully executed before the second is initiated. 
+By doing this, code conflicts are avoided.
+3. 
+Web Servers: Waiting for an HTTP request to send back a webpage.  
+Video Games: Detecting a collision to trigger damage logic.  
+IoT Devices: A thermometer sensor hitting a specific temperature to turn on an AC unit.  
